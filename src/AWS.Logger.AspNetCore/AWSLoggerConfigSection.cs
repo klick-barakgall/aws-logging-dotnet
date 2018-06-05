@@ -35,6 +35,7 @@ namespace Microsoft.Extensions.Configuration
         internal const string LOG_GROUP = "LogGroup";
         internal const string REGION = "Region";
         internal const string PROFILE = "Profile";
+        internal const string PROFILES_LOCATION = "ProfilesLocation";
         internal const string BATCH_PUSH_INTERVAL = "BatchPushInterval";
         internal const string BATCH_PUSH_SIZE_IN_BYTES = "BatchPushSizeInBytes";
         internal const string LOG_LEVEL = "LogLevel";
@@ -52,6 +53,10 @@ namespace Microsoft.Extensions.Configuration
             if (loggerConfigSection[PROFILE] != null)
             {
                 Config.Profile = loggerConfigSection[PROFILE];
+            }
+            if (loggerConfigSection[PROFILES_LOCATION] != null)
+            {
+                Config.ProfilesLocation = loggerConfigSection[PROFILES_LOCATION];
             }
             if (loggerConfigSection[BATCH_PUSH_INTERVAL] != null)
             {
